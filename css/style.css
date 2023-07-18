@@ -336,3 +336,20 @@ main {
 }
 
 /* Third section: Plans */
+.bitcoin-img-container {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../assets/imgs/bitcoinbaby.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bitcoin-img-container h2 {
+    position: relative;
+    top: 20%;
+    color: var(--just-white);
+    text-align: center;
+    font-size: 24rem;
+    font-weight: bold;
+    line-height: 26rem;
+}
