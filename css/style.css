@@ -15,6 +15,7 @@
     --warm-black: #201E1C;
     --black: #282623;
     --gray: #BABABA;
+    --hard-gray: #757575;
     --off-white: #FAF8F7;
     --just-white: #fff;
 }
@@ -30,6 +31,7 @@ html {
     font-family: 'DM Sans', sans-serif;
 }
 body {
+    min-width: 320px;
     font-size: 16rem;
 }
 
@@ -42,10 +44,9 @@ header {
     align-items: center;
     gap: 36px;
     width: 100%;
-    min-width: 320px;
     padding-top: 36px;
     text-align: center;
-    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+    background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%);
 }
 header .logo {
     width: 151px;
@@ -57,21 +58,19 @@ header .logo {
     align-items: center;
     gap: 32px;
     width: 90%;
-    min-width: 288px;
-    max-width: 900px;
-    height: 200px;
+    max-width: 500px;
 }
 .header--main-container h1 {
+    color: var(--just-white);
     font-size: 24rem;
     font-weight: bold;
     line-height: 26rem;
-    color: var(--just-white);
 }
 .header--main-container p {
+    color: var(--soft-orange);
     font-size: 14rem;
     font-weight: 500;
     line-height: 18rem;
-    color: var(--soft-orange);
 }
 .header--title-container {
     display: flex;
@@ -79,6 +78,8 @@ header .logo {
     gap: 24px;
 }
 .header--main-container .header--button {
+    position: relative;
+    top: 20px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -86,10 +87,206 @@ header .logo {
     color: var(--warm-black);
     font-size: 14rem;
     font-weight: bold;
-    line-height: normal;
     text-decoration: none;
     background-color: var(--off-white);
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+/* First section */
+.main-exchange-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    height: auto;
+    padding: 50px 10px;
+    background: var(--off-white);
+}
+.main-exchange-container .bitcoin-background {
+    width: 195px;
+    height: 195px;
+}
+.main-exchange-container .main-exchange-container--title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    max-width: 500px;
+}
+.main-exchange-container .main-exchange-container--title h2 {
+    font-size: 24rem;
+    font-weight: bold;
+    line-height: 26rem;
+    color: var(--warm-black);
+}
+.main-exchange-container .main-exchange-container--title p {
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 18rem;
+    color: var(--hard-gray);
+}
+
+/* Subsection tables */
+/* Global values for all tables*/
+.main-tables-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: 100%;
+}
+.main-tables-container .table-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 80%;
+    min-width: 230px;
+    max-width: 340px;
+}
+.main-tables-container .table-section .table-section--title {
+    position: relative;
+    left: 12px;
+    width: fit-content;
+    font-size: 18rem;
+    font-weight: bold;
+}
+.main-tables-container .table-section .table-section--table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+.table-section .table-section--table table {
+    width: 100%;
+    height: 100%;
+}
+.table-section--table table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.table-section--table table tr {
+    display: flex;
+    gap: 2px;
+}
+.table-section--table table tr:first-child td:first-child {
+    border-radius: 8px 0px 0px 0px;
+}
+.table-section--table table tr:first-child td:last-child {
+    border-radius: 0px 8px 0px 0px;
+}
+.table-section--table table tr:last-child td:first-child {
+    border-radius: 0px 0px 0px 8px;
+}
+.table-section--table table tr:last-child td:last-child {
+    border-radius: 0px 0px 8px 0px;
+}
+.table-section--table table td {
+    width: 50%;
+    word-wrap: break-word;
+    background: var(--just-white);
+}
+.table-section--table table .table--first-column {
+    padding: 10px 12px;
+    color: #B5B0AC;
+    font-size: 16rem;
+    font-weight: 500;
+    letter-spacing: -0.32px;
+}
+.table-section--table table .table--second-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 12px;
+    color: var(--hard-gray);
+    text-align: center;
+    font-size: 14rem;
+    letter-spacing: -0.28px;
+}
+.table-section--table .table--second-column img {
+    width: 12px;
+    height: 12px;
+}
+.main-tables-container .table-section .table-section--date {
+    align-self: center;
+    width: fit-content;
+    padding: 8px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+}
+.table-section .table-section--date p {
+    color: var(--warm-black);
+    text-align: center;
+    font-size: 12rem;
+}
+
+/* Currency table */
+.main-tables-container .table-section .currency-table-title {
+    color: #FF9536;
+}
+.main-tables-container .table-section .currency-table-date {
+    background-color: var(--soft-orange);
+}
+
+/* Commission table */
+.main-tables-container .table-section .commission-table-title {
+    color: var(--secondary-blue);
+}
+.main-tables-container .table-section .commission-table-date {
+    background-color: var(--soft-blue);
+}
+
+/* Second section */
+.main-product-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 10px 40px 10px;
+    background-color: var(--warm-black);
+}
+.main-product-detail .batata-icon {
+    position: absolute;
+    top: -10px;
+    width: 40.6px;
+    height: 24px;
+}
+.main-product-detail .product-detail--title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 90%;
+    height: auto;
+    text-align: center;
+}
+.main-product-detail .product-detail--title h2 {
+    color: var(--just-white);
+    font-size: 24rem;
+    font-weight: bold;
+    line-height: 26rem;
+}
+.main-product-detail .product-detail--title p {
+    color: #808080;
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 18rem;
 }
