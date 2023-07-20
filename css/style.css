@@ -118,7 +118,7 @@ main {
     gap: 40px;
     width: 100%;
     height: auto;
-    padding: 50px 10px;
+    padding: 50px 10px 38px;
     background: var(--off-white);
 }
 .main-exchange-container .bitcoin-background {
@@ -154,10 +154,12 @@ main {
     align-items: center;
     gap: 36px;
     width: 100%;
+    padding: 0 64px 12px;
 }
 .main-tables-container .table-section {
     display: flex;
     flex-direction: column;
+    scroll-snap-align: center;
     gap: 12px;
     width: 80%;
     min-width: 230px;
@@ -409,6 +411,7 @@ main {
 }
 .horizontal-scroll {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
