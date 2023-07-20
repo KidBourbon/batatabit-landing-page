@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Batatabit</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preload" href="https://fonts.googleapis.com" />
+		<link rel="preload" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=
             Inter:wght@400;500&display=swap"
@@ -17,7 +17,11 @@
 
 	<body>
 		<header>
-			<img class="logo" src="assets/imgs/header-logo.svg" alt="" />
+			<img
+				class="logo"
+				src="./assets/imgs/header-logo.svg"
+				alt="Company logo"
+			/>
 
 			<div class="header__main-container">
 				<div class="header__title-container">
@@ -67,6 +71,7 @@
 										<td class="table__second-column">
 											$1.96
 											<img
+												loading="lazy"
 												src="./assets/icons/trending-down.svg"
 												alt="Trending down icon"
 											/>
@@ -77,6 +82,7 @@
 										<td class="table__second-column">
 											$0.07
 											<img
+												loading="lazy"
 												src="./assets/icons/trending-up.svg"
 												alt="Trending up icon"
 											/>
@@ -87,6 +93,7 @@
 										<td class="table__second-column">
 											$2.15
 											<img
+												loading="lazy"
 												src="./assets/icons/trending-down.svg"
 												alt="Trending down icon"
 											/>
@@ -97,6 +104,7 @@
 										<td class="table__second-column">
 											$4.96
 											<img
+												loading="lazy"
 												src="./assets/icons/trending-down.svg"
 												alt="Trending down icon"
 											/>
@@ -149,6 +157,7 @@
 
 			<section class="main-product-detail">
 				<img
+					loading="lazy"
 					class="batata-icon"
 					src="./assets/imgs/batata-left.svg"
 					alt="Batata icon in section separator"
@@ -162,6 +171,7 @@
 				<section class="product-cards-container">
 					<article class="product-detail__card">
 						<img
+							loading="lazy"
 							class="card__icon"
 							src="./assets/icons/clock.svg"
 							alt="Orange clock icon"
@@ -175,6 +185,7 @@
 
 					<article class="product-detail__card">
 						<img
+							loading="lazy"
 							class="card__icon"
 							src="./assets/icons/eye.svg"
 							alt="Orange eye icon"
@@ -188,6 +199,7 @@
 
 					<article class="product-detail__card">
 						<img
+							loading="lazy"
 							class="card__icon"
 							src="./assets/icons/dollar-sign.svg"
 							alt="Orange dollar icon"
@@ -201,6 +213,7 @@
 
 					<article class="product-detail__card">
 						<img
+							loading="lazy"
 							class="card__icon"
 							src="./assets/icons/check-circle.svg"
 							alt="Orange circulated-check icon"
@@ -296,7 +309,11 @@
 			</section>
 
 			<section class="footer__right-section">
-				<img src="./assets/imgs/footer-logo.svg" alt="Logo de Batatabit 2023" />
+				<img
+					loading="lazy"
+					src="./assets/imgs/footer-logo.svg"
+					alt="Logo de Batatabit 2023"
+				/>
 			</section>
 		</footer>
 	</body>
