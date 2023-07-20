@@ -518,3 +518,27 @@ main {
 .plan__button--recommended span {
     background-image: url("../assets/icons/large-arrow-right-orange.svg");
 }
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    background-color: var(--bitcoin-orange);
+}
+.footer__left-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+.footer__left-section ul a {
+    text-decoration: none;
+    color: var(--just-white);
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 18rem;
+}
