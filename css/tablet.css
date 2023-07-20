@@ -1,0 +1,25 @@
+/* Tables container in the first section */
+.main-tables-container {
+  gap: 72px;
+}
+
+/* Cards copntainer in the second section */
+.main-product-detail .product-cards-container {
+  justify-content: space-evenly;
+  max-width: 850px;
+}
+
+/* Background image of the third section */
+.bitcoin-img-container {
+  background-image: url(../assets/imgs/bitcoinbaby-tablet-laptop.jpg);
+}
+
+/* Plans container in the fourth section */
+.plans-section__all-plans {
+  gap: 32px;
+}
+
+/* Global (override) */
+.horizontal-scroll {
+  justify-content: center;
+}

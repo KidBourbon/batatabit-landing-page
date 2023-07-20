@@ -163,7 +163,7 @@ main {
     gap: 12px;
     width: 80%;
     min-width: 230px;
-    max-width: 340px;
+    max-width: 260px;
 }
 .main-tables-container .table-section .table-section__title {
     position: relative;
@@ -409,16 +409,6 @@ main {
     min-height: 280px;
     padding: 0 65px;
 }
-.horizontal-scroll {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-}
 
 /* Plan */
 .plans-section__plan {
@@ -544,4 +534,23 @@ footer {
     font-size: 14rem;
     font-weight: 500;
     line-height: 18rem;
+}
+
+/* Global (override) */
+.horizontal-scroll {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+}
+
+/* Media queries */
+@media (min-width: 705px) {
+    .main-tables-container {
+        justify-content: center;
+    }
 }
