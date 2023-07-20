@@ -1,4 +1,9 @@
 /*
+Metodología utilizada: BEM (Block__Element--Modifier)
+*/
+
+/*
+Orden de los atributos:
 1. Posicionamiento
 2. Modelo caja (box model)
 3. Tipografia
@@ -15,9 +20,9 @@
     --warm-black: #201E1C;
     --warm-black-1: #282623;
     --black: #282623;
-    --gray: #BABABA;
-    --hard-gray: #757575;
-    --hard-gray-1: #808080;
+    --grey: #BABABA;
+    --hard-grey: #757575;
+    --hard-grey-1: #808080;
     --off-white: #FAF8F7;
     --just-white: #fff;
 }
@@ -54,7 +59,7 @@ header .logo {
     width: 151px;
     height: 24px;
 }
-.header--main-container {
+.header__main-container {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -62,24 +67,24 @@ header .logo {
     width: 90%;
     max-width: 500px;
 }
-.header--main-container h1 {
+.header__main-container h1 {
     color: var(--just-white);
     font-size: 24rem;
     font-weight: bold;
     line-height: 26rem;
 }
-.header--main-container p {
+.header__main-container p {
     color: var(--soft-orange);
     font-size: 14rem;
     font-weight: 500;
     line-height: 18rem;
 }
-.header--title-container {
+.header__title-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
-.header--main-container .header--button {
+.header__main-container .header__button {
     position: relative;
     top: 20px;
     display: flex;
@@ -120,7 +125,7 @@ main {
     width: 195px;
     height: 195px;
 }
-.main-exchange-container .main-exchange-container--title {
+.main-exchange-container .main-exchange-container__title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,17 +133,17 @@ main {
     text-align: center;
     max-width: 500px;
 }
-.main-exchange-container .main-exchange-container--title h2 {
+.main-exchange-container .main-exchange-container__title h2 {
     font-size: 24rem;
     font-weight: bold;
     line-height: 26rem;
     color: var(--warm-black);
 }
-.main-exchange-container .main-exchange-container--title p {
+.main-exchange-container .main-exchange-container__title p {
     font-size: 14rem;
     font-weight: 500;
     line-height: 18rem;
-    color: var(--hard-gray);
+    color: var(--hard-grey);
 }
 
 /* Subsection tables */
@@ -158,80 +163,80 @@ main {
     min-width: 230px;
     max-width: 340px;
 }
-.main-tables-container .table-section .table-section--title {
+.main-tables-container .table-section .table-section__title {
     position: relative;
     left: 12px;
     width: fit-content;
     font-size: 18rem;
     font-weight: bold;
 }
-.main-tables-container .table-section .table-section--table {
+.main-tables-container .table-section .table-section__table {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
 }
-.table-section .table-section--table table {
+.table-section .table-section__table table {
     width: 100%;
     height: 100%;
 }
-.table-section--table table tbody {
+.table-section__table table tbody {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
-.table-section--table table tr {
+.table-section__table table tr {
     display: flex;
     gap: 2px;
 }
-.table-section--table table tr:first-child td:first-child {
+.table-section__table table tr:first-child td:first-child {
     border-radius: 8px 0px 0px 0px;
 }
-.table-section--table table tr:first-child td:last-child {
+.table-section__table table tr:first-child td:last-child {
     border-radius: 0px 8px 0px 0px;
 }
-.table-section--table table tr:last-child td:first-child {
+.table-section__table table tr:last-child td:first-child {
     border-radius: 0px 0px 0px 8px;
 }
-.table-section--table table tr:last-child td:last-child {
+.table-section__table table tr:last-child td:last-child {
     border-radius: 0px 0px 8px 0px;
 }
-.table-section--table table td {
+.table-section__table table td {
     width: 50%;
     word-wrap: break-word;
     background: var(--just-white);
 }
-.table-section--table table .table--first-column {
+.table-section__table table .table__first-column {
     padding: 10px 12px;
     color: #B5B0AC;
     font-size: 16rem;
     font-weight: 500;
     letter-spacing: -0.32px;
 }
-.table-section--table table .table--second-column {
+.table-section__table table .table__second-column {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 11px 12px;
-    color: var(--hard-gray);
+    color: var(--hard-grey);
     text-align: center;
     font-size: 14rem;
     letter-spacing: -0.28px;
 }
-.table-section--table .table--second-column img {
+.table-section__table .table__second-column img {
     width: 12px;
     height: 12px;
 }
-.main-tables-container .table-section .table-section--date {
+.main-tables-container .table-section .table-section__date {
     align-self: center;
     width: fit-content;
     padding: 8px;
     font-family: 'Inter', sans-serif;
     border-radius: 8px;
 }
-.table-section .table-section--date p {
+.table-section .table-section__date p {
     color: var(--warm-black);
     text-align: center;
     font-size: 12rem;
@@ -262,7 +267,7 @@ main {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 50px 16px 40px 16px;
+    padding: 50px 16px 40px;
     background-color: var(--warm-black);
 }
 
@@ -275,7 +280,7 @@ main {
 }
 
 /* Second section title */
-.main-product-detail .product-detail--title {
+.main-product-detail .product-detail__title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -285,14 +290,14 @@ main {
     height: auto;
     text-align: center;
 }
-.main-product-detail .product-detail--title h2 {
+.main-product-detail .product-detail__title h2 {
     color: var(--just-white);
     font-size: 24rem;
     font-weight: bold;
     line-height: 26rem;
 }
-.main-product-detail .product-detail--title p {
-    color: var(--hard-gray-1);
+.main-product-detail .product-detail__title p {
+    color: var(--hard-grey-1);
     font-size: 14rem;
     font-weight: 500;
     line-height: 18rem;
@@ -305,7 +310,7 @@ main {
     flex-wrap: wrap;
     gap: 16px;
 }
-.main-product-detail .product-cards-container .product-detail--card {
+.main-product-detail .product-cards-container .product-detail__card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -318,24 +323,25 @@ main {
     background: var(--warm-black-1);
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
 }
-.product-cards-container .product-detail--card .card--icon {
+.product-cards-container .product-detail__card .card__icon {
     width: 24px;
     height: 24px;
 }
-.product-cards-container .product-detail--card .card--title {
+.product-cards-container .product-detail__card .card__title {
     color: var(--just-white);
     font-size: 18rem;
     font-weight: bold;
     line-height: 18rem;
 }
-.product-cards-container .product-detail--card .card--body {
-    color: var(--hard-gray-1);
+.product-cards-container .product-detail__card .card__body {
+    color: var(--hard-grey-1);
     font-size: 14rem;
     font-weight: 500;
     line-height: 18rem;
 }
 
-/* Third section: Plans */
+/* Third section: Bitcoin */
+/* Bitcoin background */
 .bitcoin-img-container {
     width: 100%;
     height: 50vh;
@@ -352,4 +358,163 @@ main {
     font-size: 24rem;
     font-weight: bold;
     line-height: 26rem;
+}
+
+/* Fourth section: Plans */
+.plans-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    width: 100%;
+    padding: 64px 16px 48px;
+    text-align: center;
+    background-color: var(--off-white);
+}
+
+/* Title */
+.plans-section__title {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 466px;
+    height: auto;
+}
+.plans-section__title h2 {
+    color: var(--warm-black);
+    font-size: 24rem;
+    font-weight: bold;
+    line-height: 26rem;
+}
+.plans-section__title p {
+    color: var(--hard-grey);
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 18rem;
+}
+
+/* Plans */
+/* Plans container */
+.plans-section__all-plans {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+    padding: 0 65px;
+}
+.horizontal-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+}
+
+/* Plan */
+.plans-section__plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: center;
+    width: 66%;
+    min-width: 190px;
+    max-width: 223px;
+    height: auto;
+    max-height: 247px;
+    padding: 31px 16px 24px;
+    border-radius: 8px;
+    background: var(--just-white);
+    box-shadow: 0px 4px 8px 0px rgba(89, 73, 30, 0.16);
+}
+.plan__recommended {
+    position: absolute;
+    top: -16px;
+    padding: 8px;
+    color: var(--just-white);
+    font-size: 12rem;
+    font-weight: bold;
+    background: var(--bitcoin-orange);
+    border-radius: 8px;
+}
+.plan__main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Plan's elements */
+.plan__name-price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.plan__main-container h3 {
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 18rem;
+}
+.plan__price {
+    position: relative;
+    color: var(--grey);
+    font-family: 'Inter', sans-serif;
+    font-size: 52px;
+    font-weight: bold;
+    letter-spacing: -2.16px;
+}
+.plan__price--recommended {
+    color: black;
+}
+.plan__price span {
+    position: absolute;
+    top: 8px;
+    left: -8px;
+    font-size: 12rem;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+.plan__details {
+    color: var(--hard-grey);
+    font-family: 'Inter', sans-serif;
+    font-size: 12rem;
+    font-weight: 500;
+}
+.plan__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 14rem;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid var(--grey);
+    background: var(--just-white);
+}
+.plan__button--recommended {
+    color: var(--warm-black);
+    border: 2px solid var(--bitcoin-orange);
+    background: var(--off-white);
+}
+.plan__button span {
+    display: inline-block;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    background-image: url("../assets/icons/large-arrow-right-gray.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.plan__button--recommended span {
+    background-image: url("../assets/icons/large-arrow-right-orange.svg");
 }
