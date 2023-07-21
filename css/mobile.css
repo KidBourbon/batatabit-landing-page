@@ -34,6 +34,7 @@ Orden de los atributos:
     padding: 0;
 }
 html {
+    scroll-behavior: smooth;
     font-size: 6.25%;
     font-family: 'DM Sans', sans-serif;
 }
