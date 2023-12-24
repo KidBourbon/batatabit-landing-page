@@ -1,5 +1,5 @@
 # Batatabit Landing Page
-✅ It is a real project (landing page) that was made for the company Batatabit.
+✅ A real project (landing page) that was made for the company Batatabit.
 
 ✅ It is made with HTML and CSS.
 
